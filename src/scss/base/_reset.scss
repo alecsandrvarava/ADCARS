@@ -126,7 +126,7 @@ body {
 	margin: 0;
 	font-family: $font-body;
 	font-weight: 400;
-	font-size: 25px;
+	// font-size: 25px;
 	color: $black;
 }
 
@@ -188,4 +188,20 @@ input {
 	margin: 0;
 	padding: 0;
 	appearance: none;
+}
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	background-color: $white;
+}
+.container {
+	max-width: 1660px;
+	padding: 0 15px;
+	margin: auto;
+	@media (min-width: 2000px) {
+		max-width: 1970px;
+	}
+}
+.hidden {
+	display: none;
 }

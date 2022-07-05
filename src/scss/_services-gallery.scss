@@ -1,0 +1,417 @@
+.box {
+	max-width: 1709px;
+	margin: auto;
+}
+.services-gallery {
+	padding: 10px;
+}
+.first-row {
+	display: flex;
+	@include adaptive-value("margin-bottom", 10, 7, 991, 1);
+	@include adaptive-value("gap", 10, 7, 991, 1);
+
+	& div:nth-child(1) {
+		flex: 1 1 690px;
+		@include adaptive-value("height", 408, 285.6, 991, 1);
+		cursor: pointer;
+		position: relative;
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&::after {
+			content: "Кузовний ремонт від 5000 грн";
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-color: $black-transparent;
+			font-weight: 700;
+			@include adaptive-value("font-size", 34, 21, 991, 1);
+			@include adaptive-value("padding-top", 39, 25, 991, 1);
+			@include adaptive-value("padding-left", 200, 105, 991, 1);
+			@include adaptive-value("padding-right", 52, 32, 991, 1);
+			@include adaptive-value("line-height", 41, 30, 991, 1);
+			text-align: right;
+			text-transform: uppercase;
+			color: $white;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			transition: 0.15s all;
+		}
+		&:hover::after {
+			opacity: 1;
+		}
+	}
+	& div:nth-child(2) {
+		flex: 1 1 1009px;
+		@include adaptive-value("height", 287, 200.9, 991, 1);
+		cursor: pointer;
+		position: relative;
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&::after {
+			content: "Кузовний ремонт від 5000 грн";
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-color: $black-transparent;
+			font-weight: 700;
+			@include adaptive-value("font-size", 34, 21, 991, 1);
+			@include adaptive-value("padding-top", 39, 25, 991, 1);
+			@include adaptive-value("padding-left", 200, 105, 991, 1);
+			@include adaptive-value("padding-right", 52, 32, 991, 1);
+			@include adaptive-value("line-height", 41, 30, 991, 1);
+			text-align: right;
+			text-transform: uppercase;
+			color: $white;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			transition: 0.15s all;
+		}
+		&:hover::after {
+			opacity: 1;
+		}
+	}
+}
+.second-row {
+	display: flex;
+	@include adaptive-value("gap", 10, 7, 991, 1);
+	&__first-column {
+		@include adaptive-value("width", 394, 276, 991, 1);
+		@include adaptive-value("height", 683, 478.1, 991, 1);
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		cursor: pointer;
+		position: relative;
+		&::after {
+			content: "Кузовний ремонт від 5000 грн";
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-color: $black-transparent;
+			font-weight: 700;
+			@include adaptive-value("font-size", 34, 21, 991, 1);
+			@include adaptive-value("padding-top", 39, 25, 991, 1);
+			@include adaptive-value("padding-left", 30, 15, 991, 1);
+			@include adaptive-value("padding-right", 42, 15, 991, 1);
+			@include adaptive-value("line-height", 41, 30, 991, 1);
+			text-align: right;
+			text-transform: uppercase;
+			color: $white;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			transition: 0.15s all;
+		}
+		&:hover::after {
+			opacity: 1;
+		}
+	}
+
+	&__second-column {
+	}
+
+	&__first-row {
+		display: flex;
+		@include adaptive-value("gap", 10, 7, 991, 1);
+		& div:nth-child(1) {
+			flex: 1 1 285px;
+			@include adaptive-value("height", 292, 204.4, 991, 1);
+			cursor: pointer;
+			position: relative;
+			& img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			&::after {
+				content: "Кузовний ремонт від 5000 грн";
+				position: absolute;
+				left: 0;
+				top: 0;
+				background-color: $black-transparent;
+				font-weight: 700;
+				@include adaptive-value("font-size", 34, 21, 991, 1);
+				@include adaptive-value("padding-top", 39, 25, 991, 1);
+				@include adaptive-value("padding-left", 30, 15, 991, 1);
+				@include adaptive-value("padding-right", 42, 15, 991, 1);
+				@include adaptive-value("line-height", 41, 30, 991, 1);
+				text-align: right;
+				text-transform: uppercase;
+				color: $white;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				transition: 0.15s all;
+			}
+			&:hover::after {
+				opacity: 1;
+			}
+		}
+		& div:nth-child(2) {
+			flex: 1 1 330px;
+			@include adaptive-value("height", 413, 289.1, 991, 1);
+			cursor: pointer;
+			position: relative;
+			& img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			&::after {
+				content: "Кузовний ремонт від 5000 грн";
+				position: absolute;
+				left: 0;
+				top: 0;
+				background-color: $black-transparent;
+				font-weight: 700;
+				@include adaptive-value("font-size", 34, 21, 991, 1);
+				@include adaptive-value("padding-top", 39, 25, 991, 1);
+				@include adaptive-value("padding-left", 30, 15, 991, 1);
+				@include adaptive-value("padding-right", 42, 15, 991, 1);
+				@include adaptive-value("line-height", 41, 30, 991, 1);
+				text-align: right;
+				text-transform: uppercase;
+				color: $white;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				transition: 0.15s all;
+			}
+			&:hover::after {
+				opacity: 1;
+			}
+			@include adaptive-value("top", -121, -84.7, 991, 1);
+		}
+		& div:nth-child(3) {
+			flex: 1 1 669px;
+			@include adaptive-value("height", 413, 289.1, 991, 1);
+			cursor: pointer;
+			position: relative;
+			& img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			&::after {
+				content: "Кузовний ремонт від 5000 грн";
+				position: absolute;
+				left: 0;
+				top: 0;
+				background-color: $black-transparent;
+				font-weight: 700;
+				@include adaptive-value("font-size", 34, 21, 991, 1);
+				@include adaptive-value("padding-top", 39, 25, 991, 1);
+				@include adaptive-value("padding-left", 200, 105, 991, 1);
+				@include adaptive-value("padding-right", 52, 32, 991, 1);
+				@include adaptive-value("line-height", 41, 30, 991, 1);
+				text-align: right;
+				text-transform: uppercase;
+				color: $white;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				transition: 0.15s all;
+			}
+			&:hover::after {
+				opacity: 1;
+			}
+			@include adaptive-value("top", -121, -84.7, 991, 1);
+		}
+	}
+
+	&__second-row {
+		display: flex;
+		@include adaptive-value("gap", 10, 7, 991, 1);
+		& div:nth-child(1) {
+			flex: 1 1 855px;
+			cursor: pointer;
+			position: relative;
+			& img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			&::after {
+				content: "Кузовний ремонт від 5000 грн";
+				position: absolute;
+				left: 0;
+				top: 0;
+				background-color: $black-transparent;
+				font-weight: 700;
+				@include adaptive-value("font-size", 34, 21, 991, 1);
+				@include adaptive-value("padding-top", 39, 25, 991, 1);
+				@include adaptive-value("padding-left", 200, 105, 991, 1);
+				@include adaptive-value("padding-right", 52, 32, 991, 1);
+				@include adaptive-value("line-height", 41, 30, 991, 1);
+				text-align: right;
+				text-transform: uppercase;
+				color: $white;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				transition: 0.15s all;
+			}
+			&:hover::after {
+				opacity: 1;
+			}
+			@include adaptive-value("height", 381, 266.7, 991, 1);
+			@include adaptive-value("top", -111, -77.7, 991, 1);
+		}
+		& div:nth-child(2) {
+			flex: 1 1 439px;
+			cursor: pointer;
+			position: relative;
+			& img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			&::after {
+				content: "";
+				content: "Кузовний ремонт від 5000 грн";
+				position: absolute;
+				left: 0;
+				top: 0;
+				background-color: $black-transparent;
+				font-weight: 700;
+				@include adaptive-value("font-size", 34, 21, 991, 1);
+				@include adaptive-value("padding-top", 39, 25, 991, 1);
+				@include adaptive-value("padding-left", 30, 15, 991, 1);
+				@include adaptive-value("padding-right", 42, 15, 991, 1);
+				@include adaptive-value("line-height", 41, 30, 991, 1);
+				text-align: right;
+				text-transform: uppercase;
+				color: $white;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				transition: 0.15s all;
+			}
+			&:hover::after {
+				opacity: 1;
+			}
+			@include adaptive-value("height", 381, 266.7, 991, 1);
+			@include adaptive-value("top", -111, -77.7, 991, 1);
+		}
+	}
+}
+.third-row {
+	display: flex;
+	gap: 10px;
+	@include adaptive-value("gap", 10, 7, 991, 1);
+	& div:nth-child(1) {
+		flex: 1 1 589px;
+		cursor: pointer;
+		position: relative;
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&::after {
+			content: "Кузовний ремонт від 5000 грн";
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-color: $black-transparent;
+			font-weight: 700;
+			@include adaptive-value("font-size", 34, 21, 991, 1);
+			@include adaptive-value("padding-top", 39, 25, 991, 1);
+			@include adaptive-value("padding-left", 200, 105, 991, 1);
+			@include adaptive-value("padding-right", 52, 32, 991, 1);
+			@include adaptive-value("line-height", 41, 30, 991, 1);
+			text-align: right;
+			text-transform: uppercase;
+			color: $white;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			transition: 0.15s all;
+		}
+		&:hover::after {
+			opacity: 1;
+		}
+		@include adaptive-value("height", 271, 189.7, 991, 1);
+		@include adaptive-value("top", -101, -70.7, 991, 1);
+	}
+	& div:nth-child(2) {
+		flex: 1 1 514px;
+		cursor: pointer;
+		position: relative;
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&::after {
+			content: "Кузовний ремонт від 5000 грн";
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-color: $black-transparent;
+			font-weight: 700;
+			@include adaptive-value("font-size", 34, 21, 991, 1);
+			@include adaptive-value("padding-top", 39, 25, 991, 1);
+			@include adaptive-value("padding-left", 200, 105, 991, 1);
+			@include adaptive-value("padding-right", 52, 32, 991, 1);
+			@include adaptive-value("line-height", 41, 30, 991, 1);
+			text-align: right;
+			text-transform: uppercase;
+			color: $white;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			transition: 0.15s all;
+		}
+		&:hover::after {
+			opacity: 1;
+		}
+		@include adaptive-value("height", 271, 189.7, 991, 1);
+		@include adaptive-value("top", -101, -70.7, 991, 1);
+	}
+	& div:nth-child(3) {
+		flex: 1 1 585px;
+		cursor: pointer;
+		position: relative;
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&::after {
+			content: "Кузовний ремонт від 5000 грн";
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-color: $black-transparent;
+			font-weight: 700;
+			@include adaptive-value("font-size", 34, 21, 991, 1);
+			@include adaptive-value("padding-top", 39, 25, 991, 1);
+			@include adaptive-value("padding-left", 200, 105, 991, 1);
+			@include adaptive-value("padding-right", 52, 32, 991, 1);
+			@include adaptive-value("line-height", 41, 30, 991, 1);
+			text-align: right;
+			text-transform: uppercase;
+			color: $white;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			transition: 0.15s all;
+		}
+		&:hover::after {
+			opacity: 1;
+		}
+		@include adaptive-value("height", 271, 189.7, 991, 1);
+		@include adaptive-value("top", -101, -70.7, 991, 1);
+	}
+}

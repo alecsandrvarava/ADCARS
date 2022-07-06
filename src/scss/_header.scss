@@ -50,6 +50,34 @@
 	&__list-item {
 		position: relative;
 		z-index: 10;
+		border-bottom: 1px solid transparent;
+		transition: 0.2s all;
+		&:hover {
+			border-color: #ffe66a;
+			& svg {
+				& path {
+					fill: #f2af4b;
+				}
+			}
+		}
+		&.dropdown {
+			margin-right: 10px;
+			& span {
+				position: absolute;
+				@include adaptive-value("right", -20, -15, 991, 1);
+				@include adaptive-value("top", 5.5, 4.5, 991, 1);
+				cursor: pointer;
+			}
+			& svg {
+				@include adaptive-value("width", 11, 9, 991, 1);
+				@include adaptive-value("height", 9, 7, 991, 1);
+				& path {
+					&:hover {
+						fill: #f2af4b;
+					}
+				}
+			}
+		}
 	}
 
 	&__list-item > a {
@@ -62,10 +90,10 @@
 		border-bottom: 1px solid transparent;
 		transition: 0.2s all;
 		// padding: 10px 5px;
-		&:hover {
-			margin-top: 8px;
-			border-color: #ffe66a;
-		}
+		// &:hover {
+		// 	margin-top: 8px;
+		// 	border-color: #ffe66a;
+		// }
 	}
 
 	&__sub-list {

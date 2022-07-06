@@ -1,9 +1,9 @@
-// @include adaptive-value("font-size", 25, 18, 0);
 .header {
 	position: relative;
 	z-index: 1;
 	background-color: $black;
-	@include adaptive-value("margin-bottom", 100, 30, 991, 1);
+	// @include adaptive-value("margin-bottom", 100, 30, 991, 1);
+	margin-bottom: 130px;
 	// height: 100vh;
 	&::after {
 		content: "";
@@ -128,7 +128,9 @@
 
 		margin-left: auto;
 		@include adaptive-value("margin-right", 84, 45, 991, 1);
-		@include adaptive-value("margin-bottom", 300, 120, 991, 1);
+		// @include adaptive-value("margin-bottom", 300, 120, 991, 1);
+		@include adaptive-value("padding-bottom", 390, 200, 991, 1);
+		// padding-bottom: 400px;
 		display: flex;
 		justify-content: flex-end;
 		align-items: flex-end;
@@ -166,13 +168,25 @@
 	}
 
 	&__socials {
+		position: fixed;
+		right: 58px;
+		// top: 80vh;
+		bottom: 100px;
 		@include adaptive-value("width", 115, 65, 991, 1);
 		@include adaptive-value("height", 115, 65, 991, 1);
-		margin: 0 5px 0px auto;
+		transition: 0.15s all;
+		cursor: pointer;
 		& img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 		}
+		&:hover {
+			transform: scale(1.05);
+		}
+		// @include adaptive-value("width", 115, 65, 991, 1);
+		// @include adaptive-value("height", 115, 65, 991, 1);
+		// margin: 0 5px 0px auto;
+		// position: relative;
 	}
 }

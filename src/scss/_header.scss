@@ -207,6 +207,7 @@
 
 	&__socials {
 		position: fixed;
+		z-index: 100;
 		right: 58px;
 		bottom: 100px;
 		@include adaptive-value("width", 115, 65, 991, 1);

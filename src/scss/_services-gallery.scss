@@ -1,6 +1,6 @@
 .box {
-	max-width: 1709px;
-	margin: auto;
+	// max-width: 1709px;
+	// margin: auto;
 }
 .services-gallery {
 	padding: 10px;
@@ -28,6 +28,11 @@
 		@media (min-width: 991px) {
 			border-radius: 0px;
 		}
+		// @media (min-width: 1728px) {
+		// 	width: 690px;
+		// 	// flex-grow: 0;
+		// 	// flex-shrink: 0;
+		// }
 		border-radius: 5px;
 		min-height: 150px;
 		& img {
@@ -138,11 +143,19 @@
 	}
 	@include adaptive-value("gap", 10, 7, 991, 1);
 	&__first-column {
-		@include adaptive-value("width", 394, 276, 991, 1);
-		@include adaptive-value("height", 683, 478.1, 991, 1);
-		@media (max-width: 767px) {
-			height: 150px;
-			width: 100%;
+		height: 150px;
+		width: 100%;
+		// @media (max-width: 767px) {
+
+		// }
+
+		@media (max-width: 1728px) and (min-width: 767px) {
+			@include adaptive-value("width", 394, 276, 991, 1);
+			@include adaptive-value("height", 683, 478.1, 991, 1);
+		}
+		@media (min-width: 1728px) {
+			@include adaptive-value("width", 394, -30, 0, 0);
+			@include adaptive-value("height", 683, 478.1, 991, 1);
 		}
 		& img {
 			width: 100%;
@@ -186,6 +199,12 @@
 	}
 
 	&__second-column {
+		@media (min-width: 1728px) {
+			flex-direction: column;
+			display: flex;
+			flex-grow: 1;
+			flex-shrink: 1;
+		}
 	}
 
 	&__first-row {

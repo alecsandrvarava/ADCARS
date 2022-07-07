@@ -1,0 +1,118 @@
+.three-def {
+	position: relative;
+	z-index: 0;
+	@media (max-width: 767px) {
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 15%, rgba(0, 0, 0, 0.4) 85%);
+		}
+	}
+
+	&::after {
+		content: "";
+		background: url(../images/content/three-def-tablet.jpg) no-repeat;
+		background-size: cover;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		@media (min-width: 767px) {
+			background: url(../images/content/three-def.jpg) no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+	}
+	&__title {
+		font-weight: 700;
+		@include adaptive-value("width", 389, 200, 320, 1);
+		@include adaptive-value("font-size", 54, 28, 320, 1);
+		@include adaptive-value("line-height", 65, 35, 320, 1);
+		text-transform: uppercase;
+		@include adaptive-value("padding-top", 135, 80, 320, 1);
+		@include adaptive-value("margin-left", 75, 56, 320, 1);
+		margin-bottom: 115px;
+		color: $white;
+		position: relative;
+		z-index: 10;
+		@media (min-width: 767px) {
+			margin-bottom: 85px;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			@include adaptive-value("left", -75, -61, 320, 1);
+			@include adaptive-value("top", 99, 45, 320, 1);
+			z-index: -2;
+			background: url(../images/content/vector.svg) no-repeat;
+			background-size: contain;
+			display: block;
+			@include adaptive-value("width", 190, 140, 320, 1);
+			height: 211px;
+		}
+		&::before {
+			content: "";
+			background-color: #000;
+			width: 80%;
+			@include adaptive-value("height", 160, 100, 320, 1);
+			position: absolute;
+			@include adaptive-value("top", 157, 90, 320, 1);
+			@include adaptive-value("left", 31, 22, 320, 1);
+			z-index: -1;
+		}
+		& span:nth-child(1) {
+			@include adaptive-value("font-size", 74, 35, 320, 1);
+		}
+	}
+	&__one-deff,
+	&__two-deff,
+	&__three-deff {
+		@include adaptive-value("width", 412, 200, 320, 1);
+		@include adaptive-value("font-size", 30, 14, 320, 1);
+		@include adaptive-value("line-height", 31, 22, 320, 1);
+		font-weight: 700;
+		text-transform: uppercase;
+		color: $white;
+		position: relative;
+		z-index: 10;
+		@media (max-width: 767px) {
+			@include adaptive-value("margin-left", 80, 50, 320, 1);
+		}
+		@media (min-width: 767px) {
+			@include adaptive-value("margin-left", 366, 200, 991, 1);
+			margin-bottom: 126px;
+		}
+		margin-bottom: 100px;
+
+		&::after {
+			content: "";
+			position: absolute;
+			@include adaptive-value("top", -53, -33.5, 320, 1);
+			@include adaptive-value("left", -76.5, -45, 320, 1);
+			z-index: -2;
+			background: url(../images/content/vector-mini.svg) no-repeat;
+			background-size: contain;
+			display: block;
+			@include adaptive-value("width", 156, 100, 320, 1);
+			height: 173px;
+		}
+	}
+	&__two-deff {
+		@media (min-width: 767px) {
+			@include adaptive-value("margin-left", 531, 305, 991, 1);
+			margin-bottom: 126px;
+		}
+	}
+	&__three-deff {
+		@media (min-width: 767px) {
+			@include adaptive-value("margin-left", 694, 425, 991, 1);
+		}
+		@include adaptive-value("padding-bottom", 114, 80, 320, 1);
+	}
+}

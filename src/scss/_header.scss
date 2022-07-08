@@ -195,12 +195,26 @@
 			border: none;
 			padding: 15px 61px 18px 74px;
 			cursor: pointer;
-			transition: background 0.2s ease-in-out;
-			&:hover {
+			position: relative;
+			z-index: 5;
+			&::before {
+				position: absolute;
+				left: 0;
+				top: 0;
 				background: linear-gradient(182.39deg, #fee983 9.7%, #fcd08c 98%);
+				border-radius: 15px;
+				content: "";
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+				transition: 0.15s all;
+				opacity: 0;
 			}
-			&:active {
-				background: linear-gradient(182.39deg, #ffe66a 9.7%, #f2af4b 98%);
+			&:hover::before {
+				opacity: 1;
+			}
+			&:active::before {
+				opacity: 0;
 			}
 		}
 	}

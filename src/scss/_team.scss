@@ -10,7 +10,7 @@
 	}
 
 	&__sub-title {
-		@include adaptive-value("margin-bottom", 80, 50, 320, 1);
+		@include adaptive-value("margin-bottom", 80, 45, 320, 1);
 	}
 
 	&__box {
@@ -26,23 +26,24 @@
 		@media (min-width: 768px) {
 			grid-template-columns: 1fr 1fr;
 			@include adaptive-value("gap", 50, 15, 767, 1);
+			@include adaptive-value("margin-left", 100, 0, 768, 1);
 		}
 	}
 
 	&__item {
-		@media (max-width: 767px) {
-			width: 90%;
-			margin: 0 auto 40px auto;
+		width: 90%;
+		margin: 0 auto 45px auto;
+		@media (min-width: 768px) {
+			width: 100%;
+			margin: 0 auto 0px auto;
 		}
 	}
 
 	&__img {
 		margin: auto;
+		@include adaptive-value("width", 300, 280, 320, 1);
 		@media (min-width: 768px) {
 			@include adaptive-value("width", 399, 200, 768, 1);
-		}
-		@media (max-width: 767px) {
-			@include adaptive-value("width", 399, 280, 768, 1);
 		}
 	}
 
@@ -54,18 +55,16 @@
 		border-radius: 7px;
 		text-align: center;
 		cursor: pointer;
+		padding-left: 5px;
+		padding-right: 5px;
 		@include adaptive-value("margin-bottom", 17, 10, 320, 1);
+		@include adaptive-value("font-size", 22, 17, 767, 1);
+		@include adaptive-value("padding-top", 10, 8, 767, 1);
+		@include adaptive-value("padding-bottom", 10, 9, 767, 1);
 		@media (min-width: 768px) {
 			@include adaptive-value("font-size", 26, 16, 768, 1);
-			@include adaptive-value("padding-left", 49, 5, 768, 1);
-			@include adaptive-value("padding-right", 49, 5, 768, 1);
-			@include adaptive-value("padding-top", 16, 8, 768, 1);
-			@include adaptive-value("padding-bottom", 19, 9, 768, 1);
-		}
-		@media (max-width: 767px) {
-			@include adaptive-value("font-size", 22, 20, 768, 1);
-			@include adaptive-value("padding-top", 10, 8, 768, 1);
-			@include adaptive-value("padding-bottom", 10, 9, 768, 1);
+			@include adaptive-value("padding-top", 16, 8, 767, 1);
+			@include adaptive-value("padding-bottom", 19, 9, 767, 1);
 		}
 		& a {
 			color: $black;
@@ -99,13 +98,11 @@
 		justify-items: center;
 
 		& img {
+			@include adaptive-value("width", 60, 50, 320, 1);
+			transition: 0.15s all;
 			@media (min-width: 768px) {
 				@include adaptive-value("width", 60, 40, 768, 1);
 			}
-			@media (max-width: 767px) {
-				@include adaptive-value("width", 60, 50, 320, 1);
-			}
-			transition: 0.15s all;
 			&:hover {
 				transform: scale(1.05);
 			}
@@ -114,20 +111,18 @@
 
 	&__text {
 		font-weight: 400;
-		font-size: 36px;
 		color: $black;
 		position: relative;
 		text-align: center;
+		padding: 0 10px;
+		@include adaptive-value("font-size", 20, 16, 320, 1);
+		@include adaptive-value("line-height", 24, 20, 320, 1);
 		@media (min-width: 768px) {
-			@include adaptive-value("font-size", 36, 18, 768, 1);
+			@include adaptive-value("font-size", 36, 17, 767, 1);
 			@include adaptive-value("line-height", 44, 20, 768, 1);
 			@include adaptive-value("margin-top", 76, 46, 320, 1);
 			text-align: left;
-		}
-		@media (max-width: 767px) {
-			padding: 0 10px;
-			@include adaptive-value("font-size", 20, 16, 320, 1);
-			@include adaptive-value("line-height", 24, 20, 320, 1);
+			padding: 0px;
 		}
 		&::before {
 			content: "";
@@ -136,13 +131,11 @@
 			@include adaptive-value("width", 103, 40, 320, 1);
 			height: 88px;
 			position: absolute;
+			@include adaptive-value("top", -62, -16, 320, 1);
+			@include adaptive-value("left", -4, -8, 320, 1);
 			@media (min-width: 768px) {
 				@include adaptive-value("top", -47, -32, 767, 1);
 				@include adaptive-value("left", -77, -48.5, 767, 1);
-			}
-			@media (max-width: 767px) {
-				@include adaptive-value("top", -62, -16, 320, 1);
-				@include adaptive-value("left", -4, -8, 320, 1);
 			}
 		}
 	}

@@ -85,3 +85,4 @@ $maxWidthContainer: 1660;
 		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minwidth + px}) / #{$maxWidth - $minwidth}));
 	}
 }
+// @include adaptive-value("width", 394, 260, 991, 1);

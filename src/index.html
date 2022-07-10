@@ -152,10 +152,10 @@
 						<h4 class="request__sub-title">Переконайтесь у цьому самі 😎</h4>
 						<form action="#" class="request__form">
 							<div class="request__input">
-								<input placeholder="Ваше ім’я" type="text">
+								<input name="name" placeholder="Ваше ім’я" type="text" required="" minlength="2">
 							</div>
 							<div class="request__input">
-								<input placeholder="Ваш телефон" type="text">
+								<input name="phone" placeholder="Ваш телефон" type="tel" required=""  pattern="^\+\d{2} \(\d{3}\) \d{3} \d{2} \d{2}$">
 							</div>
 							<div class="request__btn">
 								<button>Залишити заявку + бонус*</button>

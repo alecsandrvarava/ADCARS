@@ -26,7 +26,6 @@ document.addEventListener("click", (e) => {
 const dropdown = document.querySelectorAll(".dropdown");
 if (dropdown) {
   dropdown.forEach((element) => {
-    console.log(element);
     element.insertAdjacentHTML(
       "beforeend",
       `<span class="header__arrow">

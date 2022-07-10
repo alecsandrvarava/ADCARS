@@ -1,0 +1,212 @@
+.request {
+	margin-bottom: 50px;
+	position: relative;
+	z-index: 0;
+	&::after {
+		content: "";
+		background: url(../images/content/request.jpg) no-repeat;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-position: center;
+		z-index: -1;
+	}
+	&__box {
+		@media (min-width: 768px) {
+			@include adaptive-value("width", 895, 650, 991, 1);
+		}
+		width: 100%;
+		margin-left: auto;
+	}
+
+	&__title {
+		font-weight: 700;
+		@include adaptive-value("font-size", 50, 25, 320, 1);
+		@include adaptive-value("line-height", 61, 30, 320, 1);
+		text-align: center;
+		color: $white;
+		padding: 79px 0 9px 0;
+	}
+
+	&__sub-title {
+		font-weight: 400;
+		@include adaptive-value("font-size", 31, 16, 320, 1);
+		@include adaptive-value("line-height", 38, 20, 320, 1);
+		color: $white;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+	&__form {
+		& p {
+			font-weight: 400;
+			@include adaptive-value("font-size", 28, 16, 320, 1);
+			@include adaptive-value("line-height", 34, 20, 320, 1);
+			text-align: center;
+			color: $white;
+			padding-bottom: 22px;
+		}
+	}
+
+	&__input {
+		max-width: 571px;
+		margin: auto;
+		padding-bottom: 35px;
+		& input {
+			border: none;
+			background-color: transparent;
+			border-bottom: 2px solid $white;
+			padding: 4px;
+			width: 100%;
+			font-weight: 400;
+			@include adaptive-value("font-size", 25, 16, 320, 1);
+			line-height: 30px;
+			color: $white;
+			&::placeholder {
+				font-weight: 400;
+				@include adaptive-value("font-size", 25, 16, 320, 1);
+				line-height: 30px;
+				color: #959595;
+			}
+		}
+	}
+
+	&__btn {
+		display: flex;
+		justify-content: center;
+		padding-bottom: 23px;
+		& button {
+			font-family: $font-body;
+			font-weight: 700;
+			@include adaptive-value("font-size", 28, 18, 320, 1);
+			@include adaptive-value("line-height", 34, 15, 320, 1);
+			text-align: center;
+			color: $black;
+			background: linear-gradient(182.39deg, #ffe66a 9.7%, #f2af4b 98%);
+			border-radius: 15px;
+			border: none;
+			padding: 15px 15px 18px 15px;
+			@media (min-width: 768px) {
+				padding: 15px 29px 18px 29px;
+			}
+		}
+	}
+
+	&__radios {
+		display: flex;
+		@media (max-width: 767px) {
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			grid-column: 15px;
+		}
+	}
+
+	&__radio {
+		flex: 0 0 20%;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		& input:checked + label::after {
+			transform: scale(1);
+		}
+		& input:checked + label .request__circle {
+			background: linear-gradient($black, $black) padding-box,
+				linear-gradient(182.39deg, #ffe66a 9.7%, #f2af4b 98%) border-box;
+			border: 2px solid transparent;
+		}
+		& input:checked + label .request__circle::after {
+			transform: scale(1) translate(-50%, -50%);
+		}
+		& input:checked + label .icons {
+			background-image: linear-gradient(182.39deg, #ffe66a 9.7%, #f2af4b 98%);
+			opacity: 1;
+		}
+
+		& p {
+			font-weight: 400;
+			@include adaptive-value("font-size", 20, 16, 991, 1);
+			line-height: 22px;
+			text-align: center;
+			color: $white;
+			padding-bottom: 31px;
+			@media (max-width: 767px) {
+				min-width: 100px;
+			}
+		}
+		& label {
+			display: inline-flex;
+			position: relative;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			padding-bottom: 12px;
+		}
+	}
+	&__circle {
+		@include adaptive-value("width", 30, 21, 768, 1);
+		@include adaptive-value("height", 30, 21, 768, 1);
+		display: block;
+		background: linear-gradient($black, $black) padding-box,
+			linear-gradient(182.39deg, #d9d9d9 9.7%, #d9d9d9 98%) border-box;
+		border-radius: 50%;
+		border: 1px solid transparent;
+		position: relative;
+		@include adaptive-value("top", -15, -11, 768, 1);
+		@include adaptive-value("left", -12, -8, 768, 1);
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.15s all;
+		&::after {
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: scale(0) translate(-50%, -50%);
+			display: block;
+			@include adaptive-value("width", 14, 9.8, 768, 1);
+			@include adaptive-value("height", 14, 9.8, 768, 1);
+			background: linear-gradient(182.39deg, #ffe66a 9.7%, #f2af4b 98%);
+			border-radius: 50%;
+			transition: 0.15s all;
+		}
+
+		&:hover {
+			color: red;
+		}
+	}
+}
+.icons {
+	background-image: linear-gradient(182.39deg, #d9d9d9 9.7%, #d9d9d9 98%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	height: 64px;
+	display: flex;
+	align-items: center;
+	@include adaptive-value("padding-right", 25, 10, 768, 1);
+}
+.icon-consultation {
+	font-size: 65px;
+	@include adaptive-value("font-size", 65, 45.5, 768, 1);
+}
+.icon-diagnostics {
+	font-size: 61px;
+	@include adaptive-value("font-size", 61, 42.7, 768, 1);
+}
+.icon-selection {
+	@include adaptive-value("font-size", 56, 39.2, 768, 1);
+	font-size: 56px;
+}
+.icon-assessment {
+	@include adaptive-value("font-size", 46, 32.2, 768, 1);
+	font-size: 46px;
+}
+.icon-driving {
+	@include adaptive-value("font-size", 58, 40.6, 768, 1);
+	font-size: 58px;
+}
